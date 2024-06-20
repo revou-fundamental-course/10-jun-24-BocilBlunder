@@ -13,8 +13,8 @@ function convertTemperature() {
             return;
         }
         const fahrenheit = (celsius * 9/5) + 32;
-        document.getElementById('fahrenheit').value = fahrenheit.toFixed(2);
-        document.getElementById('calculation').value = `${celsius}°C * (9/5) + 32 = ${fahrenheit.toFixed(2)}°F`;
+        document.getElementById('fahrenheit').value = fahrenheit;
+        document.getElementById('calculation').value = `${celsius}°C * (9/5) + 32 = ${fahrenheit}°F`;
     } else if (fahrenheitInput) {
         const fahrenheit = parseFloat(fahrenheitInput);
         if (isNaN(fahrenheit)) {
@@ -22,8 +22,8 @@ function convertTemperature() {
             return;
         }
         const celsius = (fahrenheit - 32) * 5/9;
-        document.getElementById('celsius').value = celsius.toFixed(2);
-        document.getElementById('calculation').value = `${fahrenheit}°F - 32 * (5/9) = ${celsius.toFixed(2)}°C`;
+        document.getElementById('celsius').value = celsius;
+        document.getElementById('calculation').value = `${fahrenheit}°F - 32 * (5/9) = ${celsius}°C`;
     } else {
         alert('Please enter a value to convert');
     }
